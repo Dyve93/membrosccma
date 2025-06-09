@@ -9,7 +9,7 @@ from datetime import datetime
 criar_banco()
 
 def start(update: Update, context: CallbackContext):
-    update.message.reply_text("Bem-vindo ao sistema de membros!
+    update.message.reply_text("Bem-vindo ao sistema de membros!")
 Comandos:
 /add
 /edit
