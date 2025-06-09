@@ -1,4 +1,3 @@
-
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
 from config import BOT_TOKEN
@@ -9,15 +8,18 @@ from datetime import datetime
 criar_banco()
 
 def start(update: Update, context: CallbackContext):
-    update.message.reply_text("Bem-vindo ao sistema de membros!")
-Comandos:
-/add
-/edit
-/del
-/buscar
-/ativos
-/aniversariantes
-/carteirinha
+    mensagem = (
+        "Bem-vindo ao sistema de membros!\n\n"
+        "Comandos disponíveis:\n"
+        "/add - Adicionar membro\n"
+        "/edit - Editar membro\n"
+        "/del - Excluir membro\n"
+        "/buscar - Buscar membro\n"
+        "/ativos - Listar membros ativos\n"
+        "/aniversariantes - Ver aniversariantes\n"
+        "/carteirinha - Ver sua carteirinha"
+    )
+    update.message.reply_text(mensagem)
 
 def add(update: Update, context: CallbackContext):
     try:
