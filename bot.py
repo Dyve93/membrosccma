@@ -17,7 +17,7 @@ Comandos:
 /buscar
 /ativos
 /aniversariantes
-/carteirinha")
+/carteirinha
 
 def add(update: Update, context: CallbackContext):
     try:
